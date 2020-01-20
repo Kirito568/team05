@@ -1,0 +1,22 @@
+最初に入力
+use quizdb;
+
+テーブル作れるよ
+create table question(
+    -> id int ,
+    -> question varchar(128),
+    -> answer varchar(128)
+    -> );
+
+問題つくれるよ
+insert into question values(1,'1+1','2');
+
+テーブル見れるよ
+select * from question;
++------+----------+--------+
+| id   | question | answer |
++------+----------+--------+
+|    1 | 1+1      | 2      |
++------+----------+--------+
+
+お試し
