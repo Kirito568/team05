@@ -19,4 +19,4 @@ select * from question;
 |    1 | 1+1      | 2      |
 +------+----------+--------+
 
-お試し
+http://localhost/team05/quiz/
