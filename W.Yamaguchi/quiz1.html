@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QuizGame Question</title>
+    <style>
+        #contexts-answer{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="contexts-question">
+    <h1>Question</h1>
+    <div id="text-question"></div>
+
+    <form action="result.php">
+        <input type="hidden" id="qed" name="qed" value="">
+        <input type="text" id="text-answer" name="answer">
+        <button id="btn-answer">answer</button>
+    </form>
+</div>
+<div id="contexts-answer">
+<h1>Answer</h1>
+<div id="text-result"></div>
+</div>
+<script>
+fetch("../quiz/api/question.php")
+.then( (res)=>{
+return res.json();
+})
+.then( (json)=>{
+// ここに受信時の処理
+document.querySelector("#text-question").innerHTML=json["text"];
+document.querySelector("#qed").value=json ["qed"];
+});
+
+
+document.querySelector("#btn-answer").addEventListener("click",(e)=>{
+    /*alert("Button has pushed!");*/   
+    let answer = document.querySelector("#text-answer");
+    e.preventDefault();
+    
+    if(answer.value == ""){
+        alert("please input here.");
+        answer.focus();
+        answer.style.backgroundColor="Pink";
+       
+    }else{
+    document.querySelector("#btn-answer").innerHTML="sending...";
+    let input = encodeURIComponent(answer.value);
+    let qed   = document.querySelector("#qed").value;
+    fetch("/team05/quiz/api/answer.php?answer="+input+"&qed="+qed).then((res)=>{
+        return res.json();
+    })
+    .then((json)=>{
+    if(json["result"]){
+        document.querySelector("#text-result").innerHTML="Correct!";
+    }else{
+        document.querySelector("#text-result").innerHTML="Incorrect...";
+    }
+    document.querySelector("#contexts-question").style.display="none";
+    document.querySelector("#contexts-answer").style.display="block";
+    });
+    }
+});
+</script>
+</body>
+</html>
