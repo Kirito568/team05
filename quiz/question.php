@@ -38,6 +38,4 @@ document.querySelector("#btn-answer").addEventListener("click",(e)=>{
 });
 </script>
 </body>
-
-
 </html>
