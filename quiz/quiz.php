@@ -1,3 +1,8 @@
+<?php
+$_GET["id"];
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +17,14 @@
 <body>
 <div id="contexts-question">
     <h1>Question</h1>
-    <div id="text-question"></div>
+    <div id="text-question">
+        <?php
+        if($_GET["id"]=="quiz01"){
+
+        }
+        ?>
+
+    </div>
 
     <form action="result.php">
         <input type="hidden" id="qed" name="qed" value="">
