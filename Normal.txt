@@ -1,12 +1,12 @@
-insert into question values(1,'日本で一番大きな島は？','本州');
-insert into question values(2,'地球は何日で公転する？','365日');
-insert into question values(3,'水金地火木。次は？','土');
-insert into question values(4,'「東京ディズニーランド」の住所は千葉県何市？','浦安');
-insert into question values(5,'世界一乗り降り人数が多い駅は？','新宿');
-insert into question values(6,'2027年に開通予定の新幹線は？','リニア中央新幹線');
-insert into question values(7,'日本一大きな湖は琵琶湖。では2番目は？','霞ヶ浦');
-insert into question values(8,'「青は藍より出でて」何より青い？','本州');
-insert into question values(9,'フランス国旗は一番左が青色。ではイタリアは？','緑');
-insert into question values(10,'「黒猫」といえばヤマト運輸。では「ペリカン」といえば？','日本通運');
+insert into Normal values(1,'日本で一番大きな島は？','本州');
+insert into Normal values(2,'地球は何日で公転する？','365日');
+insert into Normal values(3,'水金地火木。次は？','土');
+insert into Normal values(4,'「東京ディズニーランド」の住所は千葉県何市？','浦安');
+insert into Normal values(5,'世界一乗り降り人数が多い駅は？','新宿');
+insert into Normal values(6,'2027年に開通予定の新幹線は？','リニア中央新幹線');
+insert into Normal values(7,'日本一大きな湖は琵琶湖。では2番目は？','霞ヶ浦');
+insert into Normal values(8,'「青は藍より出でて」何より青い？','本州');
+insert into normal values(9,'フランス国旗は一番左が青色。ではイタリアは？','緑');
+insert into Normal values(10,'「黒猫」といえばヤマト運輸。では「ペリカン」といえば？','日本通運');
 
 

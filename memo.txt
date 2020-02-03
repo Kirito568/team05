@@ -2,7 +2,7 @@
 use quizdb;
 
 テーブル作れるよ
-create table question(
+create table Normal(
     -> id int ,
     -> question varchar(128),
     -> answer varchar(128)
