@@ -1,8 +1,3 @@
-<?php
-$_GET["id"];
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,12 +13,6 @@ $_GET["id"];
 <div id="contexts-question">
     <h1>Question</h1>
     <div id="text-question">
-        <?php
-        if($_GET["id"]=="quiz01"){
-
-        }
-        ?>
-
     </div>
 
     <form action="result.php">
@@ -37,7 +26,7 @@ $_GET["id"];
 <div id="text-result"></div>
 </div>
 <script>
-fetch("/team05/quiz/api/question.php")
+fetch("/team05/quiz/api/question.php?id=" + "<?php echo $_GET['id']; ?>")
 .then( (res)=>{
 return res.json();
 })
