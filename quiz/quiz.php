@@ -51,7 +51,7 @@ document.querySelector("#btn-answer").addEventListener("click",(e)=>{
     document.querySelector("#btn-answer").innerHTML="sending...";
     let input = encodeURIComponent(answer.value);
     let qed   = document.querySelector("#qed").value;
-    fetch("/team05/quiz/api/answer.php?answer="+input+"&qed="+qed).then((res)=>{
+    fetch("/team05/quiz/api/answer.php?answer="+input+"&qed="+qed+"&id=<?php echo $_GET['id']; ?>").then((res)=>{
         return res.json();
     })
     .then((json)=>{
