@@ -31,24 +31,25 @@
         </style>
     <script>
     
-    
+    document.querySelector("#text-question").innerHTML=json["text"];
+    document.querySelector("#qed").value=json ["qed"];
     </script>
     <body>
         <h1 id="title">ジャンルを選択</h1>
         <form action="../quiz/api/question.php">
-            <input type="hidden" name="value" value="quiz01">
+            <input type="hidden" name="id" value="quiz01">
             <button class="btn">常識クイズ</button>
         </form>
         <form action="../quiz/api/question.php">
-            <input type="hidden" name="value" value="quiz02">
+            <input type="hidden" name="id" value="quiz02">
             <button class="btn">数学クイズ</button>
         </form>
         <form action="../quiz/api/question.php">
-            <input type="hidden" name="value" value="quiz03">
+            <input type="hidden" name="id" value="quiz03">
             <button class="btn">サブカル系クイズ</button>
         </form>
         <form action="../quiz/api/question.php">
-            <input type="hidden" name="value" value="quiz04">
+            <input type="hidden" name="id" value="quiz04">
             <button class="btn">ディズニークイズ</button>
         </form>
         
